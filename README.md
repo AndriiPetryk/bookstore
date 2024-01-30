@@ -15,6 +15,11 @@ I built a web application with helping Javascript/React/Redux and React Bootstra
 3. The book is clickable, if the user clicks the book, it will show a popup page, and the user can be able to modify the book name, price, category, and description. After modification: the book details can be updated on the main page.
 4. When the user clicks the delete button, the book can be deleted from the main page.
 
+### Review
+
+Open [https://bookstore-test.netlify.app/](https://bookstore-test.netlify.app/) to view it in the browser.
+
+
 ### Install Dependencies
 
 ```
