@@ -1,26 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Provider } from 'react-redux';
+import Container from "react-bootstrap/Container";
+import Navbar from "react-bootstrap/Navbar";
+import store from './redux/store';
+import BookList from './components/BookList';
+import AddBookModal from './components/AddBookModal';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App: React.FC = () => {
+    return (
+        <Provider store={store}>
+            <Navbar expand="lg" className="justify-content-between" bg='secondary' variant='dark'>
+                <Container>
+                    <Navbar.Brand>Bookstore</Navbar.Brand>
+                    <AddBookModal />
+                </Container>
+            </Navbar>
+            <Container>
+                <BookList />
+            </Container>
+        </Provider>
+    );
+};
 
 export default App;
